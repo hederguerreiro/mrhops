@@ -14,5 +14,5 @@ RUN apt-get update && apt-get install -y wget libnotify4 libgconf-2-4 libnss3 \
 # Uncomment one of these lines to execute visual studio code after built
 # CMD code --verbose --disable-gpu
 # CMD code --verbose
-# CMD code
+CMD code
 

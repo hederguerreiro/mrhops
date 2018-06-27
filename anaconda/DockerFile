@@ -1,0 +1,2 @@
+# ANACONDA Data Science Platform Powered by Python
+FROM continuumio/anaconda3
