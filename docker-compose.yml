@@ -1,1 +1,8 @@
-version: "3"
+version: '3'
+services:
+  visual-studio-code:
+    image: visual-studio-code:vsc 
+    build:
+      context: .
+      dockerfile: visual-studio-code.DockerFile
+      
