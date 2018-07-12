@@ -5,4 +5,15 @@ services:
     build:
       context: .
       dockerfile: visual-studio-code.DockerFile
+    environment:
+      - DISPLAY=172.25.96.1:0.0     
+  anaconda:
+    image: anaconda:ana
+    ports: 
+      - "8888:8888"
+    build:
+      context: .
+      dockerfile: anaconda.DockerFile
+    # command: ['/bin/bash', '-c', "/opt/conda/bin/conda install jupyter -y --quiet && mkdir /opt/notebooks && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"]
+    command: ['/bin/bash', '-c', "/opt/conda/bin/conda install anaconda anaconda-navigator -y --quiet --ip='*' --port=8888 --no-browser --allow-root"]
       
